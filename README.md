@@ -6,8 +6,18 @@
 
 ---
 
+## Executive Summary
+A pipeline analysis of 8,800 B2B CRM opportunities identified inconsistent sales performance and product-specific revenue leakage. Using SQL, Python, and Tableau — with every finding cross-validated across all three — the analysis quantified a conservative **$237K** recoverable revenue opportunity and set out practical recommendations for sales coaching and CRM data quality.
+
 ## The Problem
 MavenTech rolled out a new CRM but had no visibility into the data outside the platform — leadership couldn't see where deals were won or lost.
+
+## Business Questions
+This analysis answers:
+- Which products generate the highest lost revenue?
+- Which sales agents underperform and need coaching?
+- How much revenue can realistically be recovered — and how conservatively can it be estimated?
+- Which CRM data-quality issues distort reporting?
 
 ## The Data
 Maven Analytics *"CRM Sales Opportunities"* — 8,800 B2B deals across four linked tables (opportunities, sales agents, accounts, products).
@@ -31,6 +41,9 @@ Maven Analytics *"CRM Sales Opportunities"* — 8,800 B2B deals across four link
 1. Coach bottom-quartile agents toward the team-median playbook.
 2. Prioritise GTX Pro win-back given its high revenue-per-lost-deal.
 3. Enforce consistent CRM product naming to keep reporting reliable.
+
+## Limitations
+The opportunity estimate assumes historical pipeline performance is representative of future performance, and deliberately uses conservative assumptions — counting only below-median agents, lifted only to the team median — so the $237K figure is a floor rather than a ceiling.
 
 ## Tech Stack
 `SQL (SQLite)` · `Python` · `pandas` · `Tableau Public` · `python-pptx`
