@@ -15,9 +15,11 @@ Maven Analytics *"CRM Sales Opportunities"* — 8,800 B2B deals across four link
 ## Approach
 1. **Explore & clean** — loaded and validated the data in Python; caught and fixed a CRM product-naming inconsistency (`GTXPro` vs `GTX Pro`) that was silently breaking table joins.
 2. **Diagnose** — analysed the funnel (Prospecting → Engaging → Won / Lost) and isolated two recoverable levers.
-3. **Quantify** — cross-validated every figure between pandas and Tableau.
+3. **Quantify** — reproduced every finding in **SQL** and cross-validated across pandas, SQL, and Tableau (identical results).
 4. **Visualise** — built an interactive Tableau dashboard.
 5. **Recommend** — packaged the findings into a consulting-style deck.
+
+**Pipeline:** `CSV → SQLite (SQL) → Python (pandas) → Tableau → recommendation deck`
 
 ## Key Findings
 - **Win rate: 63.2%** on $10.0M of won revenue.
@@ -31,12 +33,13 @@ Maven Analytics *"CRM Sales Opportunities"* — 8,800 B2B deals across four link
 3. Enforce consistent CRM product naming to keep reporting reliable.
 
 ## Tech Stack
-`Python` · `pandas` · `Tableau Public` · `python-pptx`
+`SQL (SQLite)` · `Python` · `pandas` · `Tableau Public` · `python-pptx`
 
 ## Repository Structure
 
     crm-sales-pipeline-analysis/
     ├── notebooks/       01_explore.ipynb — full analysis
+    ├── sql/             analysis.sql — validated SQL queries
     ├── outputs/         cleaned data + agent summary
     ├── deliverables/    dashboard image + PowerPoint deck
     ├── data/            source CSVs
