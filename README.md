@@ -1,8 +1,8 @@
 # CRM Sales Pipeline Analysis
 
-Diagnosing where a B2B sales team loses winnable revenue — and quantifying what it's worth to fix.
+> Diagnosing where a B2B sales team loses winnable revenue — and quantifying what it's worth to fix.
 
-**🔗 [View the live interactive dashboard](https://public.tableau.com/app/profile/rajkumar.vijayan2695/viz/CRMSalesPipelineAnalysis/CRMSalesDashboard)**
+**🔗 [View the live interactive dashboard →](https://public.tableau.com/app/profile/rajkumar.vijayan2695/viz/CRMSalesPipelineAnalysis/CRMSalesDashboard)**
 
 ---
 
@@ -10,14 +10,14 @@ Diagnosing where a B2B sales team loses winnable revenue — and quantifying wha
 MavenTech rolled out a new CRM but had no visibility into the data outside the platform — leadership couldn't see where deals were won or lost.
 
 ## The Data
-Maven Analytics "CRM Sales Opportunities" — 8,800 B2B deals across four linked tables (opportunities, sales agents, accounts, products).
+Maven Analytics *"CRM Sales Opportunities"* — 8,800 B2B deals across four linked tables (opportunities, sales agents, accounts, products).
 
 ## Approach
 1. **Explore & clean** — loaded and validated the data in Python; caught and fixed a CRM product-naming inconsistency (`GTXPro` vs `GTX Pro`) that was silently breaking table joins.
 2. **Diagnose** — analysed the funnel (Prospecting → Engaging → Won / Lost) and isolated two recoverable levers.
 3. **Quantify** — cross-validated every figure between pandas and Tableau.
 4. **Visualise** — built an interactive Tableau dashboard.
-5. **Recommend** — packaged findings into a consulting-style deck.
+5. **Recommend** — packaged the findings into a consulting-style deck.
 
 ## Key Findings
 - **Win rate: 63.2%** on $10.0M of won revenue.
@@ -31,15 +31,17 @@ Maven Analytics "CRM Sales Opportunities" — 8,800 B2B deals across four linked
 3. Enforce consistent CRM product naming to keep reporting reliable.
 
 ## Tech Stack
-Python (pandas), Tableau Public, python-pptx
+`Python` · `pandas` · `Tableau Public` · `python-pptx`
 
 ## Repository Structure
-├── notebooks/ # 01_explore.ipynb — full analysis
-├── outputs/ # cleaned data + agent summary
-├── build_deck.py # generates the recommendation deck
-├── deliverables/ # dashboard image + PowerPoint deck
-└── data/ # source CSVs
 
+    crm-sales-pipeline-analysis/
+    ├── notebooks/       01_explore.ipynb — full analysis
+    ├── outputs/         cleaned data + agent summary
+    ├── deliverables/    dashboard image + PowerPoint deck
+    ├── data/            source CSVs
+    └── build_deck.py    generates the recommendation deck
 
 ---
+
 **Author:** Rajkumar Vijayan
